@@ -88,6 +88,33 @@
                                             </td>
                                         </tr>
                                         <tr height="30">
+                                            <td bgcolor="black" style="font-size: 12px; font-style: italic; color: white; text-align: center;" id="randomMessage">
+                                                <script>
+                                                    // Function to load and display random message
+                                                    function loadRandomMessage() {
+                                                        // Fetch the content of file
+                                                        fetch('random_text.txt')
+                                                            .then(response => response.text())
+                                                            .then(text => {
+                                                                // Split the text into an array of messages
+                                                                const messages = text.split('\n');
+                                                                // Select a random message from the array
+                                                                const randomIndex = Math.floor(Math.random() * messages.length);
+                                                                const randomMessage = messages[randomIndex].trim(); // Remove leading/trailing whitespace
+                                                                // Display the random message in the tc
+                                                                document.getElementById('randomMessage').innerText = randomMessage;
+                                                            })
+                                                            .catch(error => {
+                                                                console.error('Top Brick Random Splash Text doesnt sneed:', error);
+                                                            });
+                                                    }
+                                            
+                                                    // Call the function when the page is loaded
+                                                    loadRandomMessage();
+                                                </script>
+                                            </td>
+                                        </tr> 
+                                        <tr height="30">
                                             <td bgcolor="396ACD">
                                                 <marquee id="marqueeContent">
                                                     <font face="Verdana" size="3" color="White">
