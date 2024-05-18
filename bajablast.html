@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Brick Frequently Asked Questions</title>
+    <meta name="description" content="A list of all your dumb questions about this equally-dumb LEGO podcast!">
+    <link rel="icon" href="img_res/icon.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('img_res/backgroundimg.png'); 
+            background-size: 3000px; /* Adjusted to make the image repeat */
+            background-repeat: repeat; /* Added to make the image repeat */
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff; /* Text color */
+        }
+        
+        .content {
+            position: absolute;
+            text-align: center;
+        }
+
+        .maincontent {
+            
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .content p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .bigbutton {
+            width: 255px;
+            height: 54px;
+            background-color: #ffffff;
+            border: 5px solid #406281;
+            border-radius: 5px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #000000;
+            line-height: 54px;
+            cursor: pointer;
+        }
+
+        .bigbutton:hover {
+            background-color: #dbdbdb; /* Slightly grayer background on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Add your content here -->
+    <div class="maincontent">
+        
+        <table align="center">
+            <tr>
+                <td>
+                    <!-- BEGIN -->
+
+                    <td>
+                        <!--here is the main content -->
+                        <table width="996">
+                            <tr>
+                                <td>
+                                    <table align="center" width="996" cellspacing="0" cellpadding="0">
+                                        <tr bgcolor="black">
+                                            <td>
+                                                <a href="index.html">
+                                                    <img src="img_res/banner.png" width="996" height="auto">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr height="30">
+                                            <td bgcolor="black" style="font-size: 12px; font-style: italic; color: white; text-align: center;" id="randomMessage">
+                                                <script>
+                                                    // Function to load and display random message
+                                                    function loadRandomMessage() {
+                                                        // Fetch the content of file
+                                                        fetch('random_text.txt')
+                                                            .then(response => response.text())
+                                                            .then(text => {
+                                                                // Split the text into an array of messages
+                                                                const messages = text.split('\n');
+                                                                // Select a random message from the array
+                                                                const randomIndex = Math.floor(Math.random() * messages.length);
+                                                                const randomMessage = messages[randomIndex].trim(); // Remove leading/trailing whitespace
+                                                                // Display the random message in the tc
+                                                                document.getElementById('randomMessage').innerText = randomMessage;
+                                                            })
+                                                            .catch(error => {
+                                                                console.error('Top Brick Random Splash Text doesnt sneed:', error);
+                                                            });
+                                                    }
+                                            
+                                                    // Call the function when the page is loaded
+                                                    loadRandomMessage();
+                                                </script>
+                                            </td>
+                                        </tr> 
+                                        <tr height="30">
+                                            <td bgcolor="396ACD">
+                                                <marquee id="marqueeContent">
+                                                    <font face="Verdana" size="3" color="White">
+                                                        <script>
+                                                            fetch('marquee.txt')
+                                                                .then(response => response.text())
+                                                                .then(text => {
+                                                                    document.getElementById('marqueeContent').innerHTML = '<font face="Verdana" size="3" color="White">' + text + '</font>';
+                                                                })
+                                                                .catch(error => console.error('Error fetching marquee content:', error));
+                                                        </script>
+                                                    </font>
+                                                </marquee>
+                                            </td>
+                                        </tr>
+                                        <tr height="500">
+                                            <td>
+                                                <table height="500" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td width="200" bgcolor="8AA5BD" style=vertical-align:top;>
+                                                            <!-- Left wing nav bar -->
+                                                            <table cellspacing="0" cellpadding="0">
+                                                                <tr height="500">
+                                                                    <td width="5" style=vertical-align:top;>
+                                                                      <!-- top edge -->
+                                                                    </td>
+                                                                    <td style=vertical-align:top;>
+                                                                        
+                                                                        <table width="190" cellspacing="0" cellpadding="0" style=vertical-align:top;>
+                                                                            <tr>
+                                                                                <td height="5">
+
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <img src="img_res/buttonepisode.png" height="30px" width="auto">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="episodes.html">All Episodes</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="new.html">Newest Episode</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="random.html">Random Episode</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td height="6">
+                                                                                    <!--padding-->
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <img src="img_res/buttoninterviews.png" height="30px" width="auto">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="guests.html">All Guest Appearances</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="tbasguests.html"> TB On Other Podcasts</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                        
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="requestguest.html">Request A Guest</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td height="6">
+                                                                                    <!--padding-->
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <img src="img_res/buttoncommunity.png" height="30px" width="auto">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="fanservice.html">FANSERVICE TIME</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="mocs.html">Featured MOCs</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="posts.html">#TopBrickPodcast</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td height="6">
+                                                                                    <!--padding-->
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <img src="img_res/buttonothers.png" height="30px" width="auto">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="terms.html">Terms & Conditions</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="privacypolicy.html">Privacy Policy</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="aboutus.html">About Us</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="links.html">Useful Links</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="faq.html">FAQ's</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                <font face="Verdana" size="2" color="blue">
+                                                                                    <a href="https://www.instagram.com/brickinbrood/"> AFOL Streaming Guide</a>
+                                                                                </font>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        
+                                                                    </td>
+                                                                    <td width="3">
+
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                            </table>
+
+                                                    
+                                                        </td>
+                                                        <td width="595" style="background-color: black; vertical-align:top;">
+                                                            <!-- Img carousel, highlights, main content...-->
+                                                                <table bgcolor="black">
+                                                                    <tr>                                                                                                                                                                                                                
+                                                                        <td width="594" style="background-color: black; vertical-align:top;">                                                                                                                                                   
+                                                                            <div style="background-color: black; padding: 4px; vertical-align:top;">
+                                                                                <p style="font-size: 20px; text-align: center; vertical-align:top;"><b>Why Baja Blast is the BEST Dew</b></p>
+                                                                                <p style="font-size: 12px; text-align: left; vertical-align:top; margin:0;">Let's just get ONE thing straight on this Mountain Dew web board. Mountain Dew Baja Blast is the best fucking drink ever created. Nothing even comes close. Not a single drink. That's fucking RIGHT, your favorite Mountain Dew version fucking EATS SHIT in comparison to Mountain Dew Baja Blast. This is a FACT, and nothing you can say could come CLOSE to refuting it. Don't fucking try, you pathetic little shits. This drink has been around since 2004 and it's STILL a big fucking deal. How many other Mountain Dews can live up to that same standard. Mountain Dew Code Red? Fucking garbage. You know who drinks Mountain Dew Code Red? Edge-lord 13 year olds trying to start a gaming youtube channel. And balding 45 year olds. And fucking nobody else. Mountain Dew Voltage? There are still people crying to bring back fucking Mountain Dew Revolution and Mountain Dew Supernova. Mountain Dew White Out? Discontinued. Mountain Dew Game Fuel Cherry? Gone. And I know what you're going to fucking say. "Mountain Dew Baja Blast sucks a dick because it lost to Mountain Dew Pitch Black in the Dewcision in 2016!" Well, guess what, dipshit. Mountain Dew Pitch Black is discontinued. You can't get it anymore. But people actually give a shit about Mountain Dew Baja Blast. Holy fucking shit, right? No one fucking cares about your edgelord shitty ass fucking Fanta Grape ass shit. The only person I knew who bought that shit was my buddy Eric, who now believes in fearmongering conspiracy theories like an ingrate. He isn't my friend anymore. Both because he's a wingnut, and because he won't drink Mountain Dew Baja Blast. Mountain Dew Pitch Black fucking sucks. And no one fucking wanted it. So they got rid of it, like any rational multi-billion dollar company would do. Mountain Dew Baja Blast is still the fucking best Mountain Dew. It hails from Taco Bell, which is the greatest eating establishment known to fucking man. Have you ever had a Crunchwrap? They're fucking great. How about the Quesarito? Or the Nacho Fries. Or the Quesalupa. I could go on. Taco Bell is the greatest fast food ever fucking invented, so it makes sense their Mountain Dew flavor is the greatest fucking thing. KFC, and it's Mountain Dew Sweet Lightning? Fucking absolute garbage. No one wants to eat that shitty microwave chicken and peach flavored medicine. They got rid of fucking potato wedges so they could cheap out on a lazy copy of the Taco Bell Nacho Fries. Except they turned good fries into absolute garbage. How the fuck they managed to do that, no one will EVER fucking know. Mountain Dew Southern Shock, at BoJangles? Whose fucking idea was it to name a drink "Southern Shock?" Are they "proud of their heritage" or something? Do the executives have fucking confederate flags flying in their bedrooms, like the traitors to America they are? Absolute bullshit. Mountain Dew Baja Blast is the only fucking fountain drink worth a damn. Have you seen another fountain drink so highly demanded, they're forced to release it in bottles and 12-packs at the fucking grocery stores so people can hoard it like the apocolypse is coming? God no. I went to Sam's Club last year and they had it in fucking 36-packs. They don't even sell regular fucking Mountain Dew in 36-packs. And they keep putting it out every year, because people fucking buy them by the cartful. But, you notice, they don't keep it on shelves all year! This is because they realized that if they take it off shelves for six months, they can make a big deal advertising its return for the other six months, and then people go fucking wild buying it. It's fucking smart. Do you ever see people going wild buying cough syrup ass Mountain Dew Code Red? God no. How many other Mountain Dew versions are a big enough deal to get a diet version? Not very fucking many. I've seen like, a diet Mountain Dew Code Red, which got discontinued because no one bought it. But they have a diet Mountain Dew Baja Blast. Because even the diabetics and sparkling-water hipsters drink this shit up. I've seen people who shrivel at the thought of regular Mountain Dew, lose their fucking shit over the presence of Mountain Dew Baja Blast 12-packs at Walmart. My fucking grandma drinks Mountain Dew Baja Blast. There is nothing you could say to sway my opinion - Mountain Dew Baja Blast is the best fucking drink ever created.</p>
+                                                                            </div>                                                                                                                                                                                                                          
+                                                                        </td>                                                                   
+                                                                    </tr>
+                                                                                                                                                                                           
+                                                                </table>
+                                                        
+                                                        </td>
+                                                        <td width="200" style=vertical-align:top;>
+                                                            <!-- Our SPONSORS!-->
+                                                            <img src="img_res/Sponsors.png" width="200" height="auto" style=vertical-align:top;>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    
+        
+                                        
+                                        <!-- copyright info -->
+                                        <tr>
+                                            <td align="center">
+                                                <font size="2" color="white">
+                                                <p style="margin: 0;"><i>copyright 2024 Emersonac Reviews, Diamond Brix Productions, Gundom & GalaxsuDragon. All rights reserved.</i></p>
+                                                <p style="margin: 0;"><i>Unauthorized reproduction, distribution, or transmission of any part of this website is prohibited.</i></p>
+                                                <p style="margin: 0;"><i>Your use of this site constitutes acceptance of our terms and conditions.</i></p>
+                                                </font>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </td>
+
+
+
+
+                </td>
+            </tr>
+        </table>
+
+
+
+
+
+
+        <!-- Add more content as needed -->
+    </div>
+    <!-- Add the rest of your HTML content here -->
+</body>
+</html>
